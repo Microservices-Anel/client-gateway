@@ -15,9 +15,9 @@ const envVarsSchema = joi.object({
     PORT: joi.number().required(),
     PRODUCTS_MICROSERVICE_HOST: joi.string().required(),
     PRODUCTS_MICROSERVICE_PORT: joi.number().required(),
+
     ORDERS_MICROSERVICE_HOST: joi.string().required(),
     ORDERS_MICROSERVICE_PORT: joi.number().required(),
-
 })
 .unknown(true);
 
@@ -39,5 +39,5 @@ export const envs = {
     ordersMicroserviceOptions: {
         host: envVars.ORDERS_MICROSERVICE_HOST,
         port: envVars.ORDERS_MICROSERVICE_PORT
-    },
+    }
 }
