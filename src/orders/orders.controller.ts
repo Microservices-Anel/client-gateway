@@ -24,6 +24,7 @@ export class OrdersController {
   }
 
   @Get()
+
   findAll(@Query() paginationDto: OrderPaginationDto) {
     return this.ordersClient.send('findAllOrders', paginationDto)
     .pipe(
